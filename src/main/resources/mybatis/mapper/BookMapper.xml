@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.monk.myreader.mapper.BookMapper" >
+  <resultMap id="BaseResultMap" type="com.monk.myreader.bean.Book" >
+    <result column="id" property="id" jdbcType="BIGINT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="author" property="author" jdbcType="VARCHAR" />
+    <result column="picture" property="picture" jdbcType="VARCHAR" />
+    <result column="length" property="length" jdbcType="INTEGER" />
+    <result column="charSet" property="charSet" jdbcType="VARCHAR" />
+    <result column="size" property="size" jdbcType="BIGINT" />
+    <result column="path" property="path" jdbcType="VARCHAR" />
+    <result column="up_date" property="upDate" jdbcType="DATE" />
+    <result column="download_count" property="downloadCount" jdbcType="BIGINT" />
+    <result column="star_avg" property="starAvg" jdbcType="DOUBLE" />
+    <result column="category_id" property="categoryId" jdbcType="BIGINT" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.monk.myreader.bean.Book" extends="BaseResultMap" >
+    <result column="introduction" property="introduction" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, name, author, picture, length, charSet, size, path, up_date, download_count,
+    star_avg, category_id
+  </sql>
+  <sql id="Blob_Column_List" >
+    introduction
+  </sql>
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.monk.myreader.bean.BookExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from book
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.monk.myreader.bean.BookExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from book
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.monk.myreader.bean.BookExample" >
+    delete from book
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.monk.myreader.bean.Book"  useGeneratedKeys="true" keyProperty="id">
+    insert into book (id, name, author, 
+      picture, length, charSet,
+      size, path, up_date, download_count, 
+      star_avg, category_id, introduction
+      )
+    values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, 
+      #{picture,jdbcType=VARCHAR}, #{length,jdbcType=INTEGER}, #{charSet,jdbcType=VARCHAR},
+      #{size,jdbcType=BIGINT}, #{path,jdbcType=VARCHAR}, #{upDate,jdbcType=DATE}, #{downloadCount,jdbcType=BIGINT}, 
+      #{starAvg,jdbcType=DOUBLE}, #{categoryId,jdbcType=BIGINT}, #{introduction,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.monk.myreader.bean.Book"  useGeneratedKeys="true" keyProperty="id">
+    insert into book
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="author != null" >
+        author,
+      </if>
+      <if test="picture != null" >
+        picture,
+      </if>
+      <if test="length != null" >
+        length,
+      </if>
+      <if test="charSet != null" >
+        charSet,
+      </if>
+      <if test="size != null" >
+        size,
+      </if>
+      <if test="path != null" >
+        path,
+      </if>
+      <if test="upDate != null" >
+        up_date,
+      </if>
+      <if test="downloadCount != null" >
+        download_count,
+      </if>
+      <if test="starAvg != null" >
+        star_avg,
+      </if>
+      <if test="categoryId != null" >
+        category_id,
+      </if>
+      <if test="introduction != null" >
+        introduction,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null" >
+        #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="picture != null" >
+        #{picture,jdbcType=VARCHAR},
+      </if>
+      <if test="length != null" >
+        #{length,jdbcType=INTEGER},
+      </if>
+      <if test="charSet != null" >
+        #{charSet,jdbcType=VARCHAR},
+      </if>
+      <if test="size != null" >
+        #{size,jdbcType=BIGINT},
+      </if>
+      <if test="path != null" >
+        #{path,jdbcType=VARCHAR},
+      </if>
+      <if test="upDate != null" >
+        #{upDate,jdbcType=DATE},
+      </if>
+      <if test="downloadCount != null" >
+        #{downloadCount,jdbcType=BIGINT},
+      </if>
+      <if test="starAvg != null" >
+        #{starAvg,jdbcType=DOUBLE},
+      </if>
+      <if test="categoryId != null" >
+        #{categoryId,jdbcType=BIGINT},
+      </if>
+      <if test="introduction != null" >
+        #{introduction,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.monk.myreader.bean.BookExample" resultType="java.lang.Integer" >
+    select count(*) from book
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update book
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.author != null" >
+        author = #{record.author,jdbcType=VARCHAR},
+      </if>
+      <if test="record.picture != null" >
+        picture = #{record.picture,jdbcType=VARCHAR},
+      </if>
+      <if test="record.length != null" >
+        length = #{record.length,jdbcType=INTEGER},
+      </if>
+      <if test="record.charSet != null" >
+        charSet = #{record.charSet,jdbcType=VARCHAR},
+      </if>
+      <if test="record.size != null" >
+        size = #{record.size,jdbcType=BIGINT},
+      </if>
+      <if test="record.path != null" >
+        path = #{record.path,jdbcType=VARCHAR},
+      </if>
+      <if test="record.upDate != null" >
+        up_date = #{record.upDate,jdbcType=DATE},
+      </if>
+      <if test="record.downloadCount != null" >
+        download_count = #{record.downloadCount,jdbcType=BIGINT},
+      </if>
+      <if test="record.starAvg != null" >
+        star_avg = #{record.starAvg,jdbcType=DOUBLE},
+      </if>
+      <if test="record.categoryId != null" >
+        category_id = #{record.categoryId,jdbcType=BIGINT},
+      </if>
+      <if test="record.introduction != null" >
+        introduction = #{record.introduction,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map" >
+    update book
+    set id = #{record.id,jdbcType=BIGINT},
+      name = #{record.name,jdbcType=VARCHAR},
+      author = #{record.author,jdbcType=VARCHAR},
+      picture = #{record.picture,jdbcType=VARCHAR},
+      length = #{record.length,jdbcType=INTEGER},
+      charSet = #{record.charSet,jdbcType=VARCHAR},
+      size = #{record.size,jdbcType=BIGINT},
+      path = #{record.path,jdbcType=VARCHAR},
+      up_date = #{record.upDate,jdbcType=DATE},
+      download_count = #{record.downloadCount,jdbcType=BIGINT},
+      star_avg = #{record.starAvg,jdbcType=DOUBLE},
+      category_id = #{record.categoryId,jdbcType=BIGINT},
+      introduction = #{record.introduction,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update book
+    set id = #{record.id,jdbcType=BIGINT},
+      name = #{record.name,jdbcType=VARCHAR},
+      author = #{record.author,jdbcType=VARCHAR},
+      picture = #{record.picture,jdbcType=VARCHAR},
+      length = #{record.length,jdbcType=INTEGER},
+      charSet = #{record.charSet,jdbcType=VARCHAR},
+      size = #{record.size,jdbcType=BIGINT},
+      path = #{record.path,jdbcType=VARCHAR},
+      up_date = #{record.upDate,jdbcType=DATE},
+      download_count = #{record.downloadCount,jdbcType=BIGINT},
+      star_avg = #{record.starAvg,jdbcType=DOUBLE},
+      category_id = #{record.categoryId,jdbcType=BIGINT}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>

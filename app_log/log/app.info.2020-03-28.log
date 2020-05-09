@@ -1,0 +1,218 @@
+2020-03-28 16:00:26.319 INFO [main]com.monk.myreader.MyReaderApplication.logStarting:50 -Starting MyReaderApplication on DESKTOP-T1BP46Q with PID 15252 (D:\CODE\idea\MyReader\target\classes started by kuexun in D:\CODE\idea\MyReader)
+2020-03-28 16:00:26.337 INFO [main]com.monk.myreader.MyReaderApplication.logStartupProfileInfo:675 -No active profile set, falling back to default profiles: default
+2020-03-28 16:00:28.606 WARN [main]org.mybatis.spring.mapper.ClassPathMapperScanner.warn:44 -No MyBatis mapper was found in '[com.monk.reader.mapper]' package. Please check your configuration.
+2020-03-28 16:00:29.042 WARN [main]org.mybatis.spring.mapper.ClassPathMapperScanner.warn:44 -No MyBatis mapper was found in '[com.monk.myreader]' package. Please check your configuration.
+2020-03-28 16:00:29.682 INFO [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7d9a8f4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-28 16:00:30.647 INFO [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8080 (http)
+2020-03-28 16:00:30.730 INFO [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-28 16:00:30.785 INFO [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-28 16:00:30.785 INFO [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-03-28 16:00:30.794 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-03-28 16:00:30.794 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-28 16:00:30.795 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-28 16:00:31.142 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-03-28 16:00:31.475 INFO [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-28 16:00:31.476 INFO [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:296 -Root WebApplicationContext: initialization completed in 4787 ms
+2020-03-28 16:00:31.755 WARN [main]o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh:557 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookController': Unsatisfied dependency expressed through field 'bookService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookServiceImpl': Unsatisfied dependency expressed through field 'bookMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.monk.myreader.mapper.BookMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-03-28 16:00:31.757 INFO [main]org.apache.catalina.core.StandardService.log:173 -Stopping service [Tomcat]
+2020-03-28 16:00:31.822 INFO [main]o.s.b.a.logging.ConditionEvaluationReportLoggingListener.logMessage:142 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-03-28 16:02:40.155 INFO [main]com.monk.myreader.MyReaderApplication.logStarting:50 -Starting MyReaderApplication on DESKTOP-T1BP46Q with PID 15972 (D:\CODE\idea\MyReader\target\classes started by kuexun in D:\CODE\idea\MyReader)
+2020-03-28 16:02:40.159 INFO [main]com.monk.myreader.MyReaderApplication.logStartupProfileInfo:675 -No active profile set, falling back to default profiles: default
+2020-03-28 16:02:41.770 WARN [main]org.mybatis.spring.mapper.ClassPathMapperScanner.warn:44 -No MyBatis mapper was found in '[com.monk.reader.mapper]' package. Please check your configuration.
+2020-03-28 16:02:41.926 WARN [main]org.mybatis.spring.mapper.ClassPathMapperScanner.warn:44 -No MyBatis mapper was found in '[com.monk.myreader]' package. Please check your configuration.
+2020-03-28 16:02:42.267 INFO [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1bb232f2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-28 16:02:42.624 INFO [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8080 (http)
+2020-03-28 16:02:42.641 INFO [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-28 16:02:42.655 INFO [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-28 16:02:42.655 INFO [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-03-28 16:02:42.663 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-03-28 16:02:42.663 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-28 16:02:42.663 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-28 16:02:42.669 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-03-28 16:02:42.891 INFO [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-28 16:02:42.892 INFO [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:296 -Root WebApplicationContext: initialization completed in 2632 ms
+2020-03-28 16:02:42.975 WARN [main]o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh:557 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookController': Unsatisfied dependency expressed through field 'bookService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookServiceImpl': Unsatisfied dependency expressed through field 'bookMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.monk.myreader.mapper.BookMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-03-28 16:02:42.977 INFO [main]org.apache.catalina.core.StandardService.log:173 -Stopping service [Tomcat]
+2020-03-28 16:02:43.002 INFO [main]o.s.b.a.logging.ConditionEvaluationReportLoggingListener.logMessage:142 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-03-28 16:03:29.977 INFO [main]com.monk.myreader.MyReaderApplication.logStarting:50 -Starting MyReaderApplication on DESKTOP-T1BP46Q with PID 11784 (D:\CODE\idea\MyReader\target\classes started by kuexun in D:\CODE\idea\MyReader)
+2020-03-28 16:03:29.983 INFO [main]com.monk.myreader.MyReaderApplication.logStartupProfileInfo:675 -No active profile set, falling back to default profiles: default
+2020-03-28 16:03:31.567 INFO [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$31b135d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-28 16:03:31.906 INFO [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8080 (http)
+2020-03-28 16:03:31.923 INFO [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-28 16:03:31.935 INFO [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-28 16:03:31.935 INFO [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-03-28 16:03:31.942 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-03-28 16:03:31.942 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-28 16:03:31.943 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-28 16:03:31.947 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-03-28 16:03:32.167 INFO [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-28 16:03:32.167 INFO [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:296 -Root WebApplicationContext: initialization completed in 2101 ms
+2020-03-28 16:03:33.686 WARN [main]o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh:557 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/C:/Users/kuexun/.m2/repository/io/springfox/springfox-spring-web/2.6.1/springfox-spring-web-2.6.1.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/kuexun/.m2/repository/io/springfox/springfox-spring-web/2.6.1/springfox-spring-web-2.6.1.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'bookController' method 
+public com.monk.myreader.dto.Result com.monk.myreader.controller.BookController.update(java.lang.Long,com.monk.myreader.bean.Book)
+to {GET /book/{id}}: There is already 'bookController' bean method
+public com.monk.myreader.dto.Result<com.monk.myreader.bean.Book> com.monk.myreader.controller.BookController.get(java.lang.Long) mapped.
+2020-03-28 16:03:33.690 INFO [main]org.apache.catalina.core.StandardService.log:173 -Stopping service [Tomcat]
+2020-03-28 16:03:33.713 INFO [main]o.s.b.a.logging.ConditionEvaluationReportLoggingListener.logMessage:142 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-03-28 16:06:47.230 INFO [main]com.monk.myreader.MyReaderApplication.logStarting:50 -Starting MyReaderApplication on DESKTOP-T1BP46Q with PID 14004 (D:\CODE\idea\MyReader\target\classes started by kuexun in D:\CODE\idea\MyReader)
+2020-03-28 16:06:47.235 INFO [main]com.monk.myreader.MyReaderApplication.logStartupProfileInfo:675 -No active profile set, falling back to default profiles: default
+2020-03-28 16:06:48.845 INFO [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$70cc5e82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-28 16:06:49.253 INFO [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8080 (http)
+2020-03-28 16:06:49.270 INFO [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-28 16:06:49.285 INFO [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-28 16:06:49.285 INFO [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-03-28 16:06:49.293 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-03-28 16:06:49.293 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-28 16:06:49.294 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-28 16:06:49.298 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-03-28 16:06:49.528 INFO [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-28 16:06:49.528 INFO [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:296 -Root WebApplicationContext: initialization completed in 2228 ms
+2020-03-28 16:06:50.563 WARN [main]o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh:557 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/C:/Users/kuexun/.m2/repository/io/springfox/springfox-spring-web/2.6.1/springfox-spring-web-2.6.1.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/kuexun/.m2/repository/io/springfox/springfox-spring-web/2.6.1/springfox-spring-web-2.6.1.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'bookController' method 
+public com.monk.myreader.dto.Result com.monk.myreader.controller.BookController.update(java.lang.Long,com.monk.myreader.bean.Book)
+to {GET /book/{id}}: There is already 'bookController' bean method
+public com.monk.myreader.dto.Result<com.monk.myreader.bean.Book> com.monk.myreader.controller.BookController.get(java.lang.Long) mapped.
+2020-03-28 16:06:50.567 INFO [main]org.apache.catalina.core.StandardService.log:173 -Stopping service [Tomcat]
+2020-03-28 16:06:50.595 INFO [main]o.s.b.a.logging.ConditionEvaluationReportLoggingListener.logMessage:142 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-03-28 16:10:56.146 INFO [main]com.monk.myreader.MyReaderApplication.logStarting:50 -Starting MyReaderApplication on DESKTOP-T1BP46Q with PID 6452 (D:\CODE\idea\MyReader\target\classes started by kuexun in D:\CODE\idea\MyReader)
+2020-03-28 16:10:56.173 INFO [main]com.monk.myreader.MyReaderApplication.logStartupProfileInfo:675 -No active profile set, falling back to default profiles: default
+2020-03-28 16:10:57.654 INFO [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c7ac4cc5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-28 16:10:58.035 INFO [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8080 (http)
+2020-03-28 16:10:58.052 INFO [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-28 16:10:58.066 INFO [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-28 16:10:58.066 INFO [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-03-28 16:10:58.075 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-03-28 16:10:58.075 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-28 16:10:58.075 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-28 16:10:58.079 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-03-28 16:10:58.348 INFO [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-28 16:10:58.348 INFO [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:296 -Root WebApplicationContext: initialization completed in 2100 ms
+2020-03-28 16:10:59.641 INFO [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:171 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-28 16:10:59.998 INFO [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:120 -Context refreshed
+2020-03-28 16:11:00.035 INFO [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:123 -Found 1 custom documentation plugin(s)
+2020-03-28 16:11:00.055 INFO [main]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
+2020-03-28 16:11:00.420 INFO [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8080"]
+2020-03-28 16:11:00.447 INFO [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:204 -Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-28 16:11:00.451 INFO [main]com.monk.myreader.MyReaderApplication.logStarted:59 -Started MyReaderApplication in 5.152 seconds (JVM running for 6.994)
+2020-03-28 16:11:14.669 INFO [http-nio-8080-exec-1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-28 16:11:14.669 INFO [http-nio-8080-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:524 -Initializing Servlet 'dispatcherServlet'
+2020-03-28 16:11:14.681 INFO [http-nio-8080-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:546 -Completed initialization in 12 ms
+2020-03-28 16:19:54.470 INFO [http-nio-8080-exec-8]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
+2020-03-28 20:16:52.152 INFO [main]com.monk.myreader.MyReaderApplication.logStarting:50 -Starting MyReaderApplication on DESKTOP-T1BP46Q with PID 15476 (D:\CODE\idea\MyReader\target\classes started by kuexun in D:\CODE\idea\MyReader)
+2020-03-28 20:16:52.152 INFO [main]com.monk.myreader.MyReaderApplication.logStartupProfileInfo:675 -No active profile set, falling back to default profiles: default
+2020-03-28 20:16:54.167 INFO [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5a9885fe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-28 20:16:54.557 INFO [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8080 (http)
+2020-03-28 20:16:54.589 INFO [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-28 20:16:54.589 INFO [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-28 20:16:54.589 INFO [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-03-28 20:16:54.604 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-03-28 20:16:54.604 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-28 20:16:54.604 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-28 20:16:54.604 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-03-28 20:16:54.870 INFO [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-28 20:16:54.885 INFO [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:296 -Root WebApplicationContext: initialization completed in 2577 ms
+2020-03-28 20:16:56.244 INFO [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:171 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-28 20:16:56.526 INFO [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:120 -Context refreshed
+2020-03-28 20:16:56.541 INFO [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:123 -Found 1 custom documentation plugin(s)
+2020-03-28 20:16:56.572 INFO [main]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
+2020-03-28 20:16:56.932 INFO [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8080"]
+2020-03-28 20:16:56.963 INFO [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:204 -Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-28 20:16:56.963 INFO [main]com.monk.myreader.MyReaderApplication.logStarted:59 -Started MyReaderApplication in 5.655 seconds (JVM running for 7.753)
+2020-03-28 20:17:16.630 INFO [http-nio-8080-exec-1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-28 20:17:16.630 INFO [http-nio-8080-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:524 -Initializing Servlet 'dispatcherServlet'
+2020-03-28 20:17:16.646 INFO [http-nio-8080-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:546 -Completed initialization in 16 ms
+2020-03-28 20:17:16.802 INFO [http-nio-8080-exec-1]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
+2020-03-28 20:19:01.621 INFO [main]com.monk.myreader.MyReaderApplication.logStarting:50 -Starting MyReaderApplication on DESKTOP-T1BP46Q with PID 15988 (D:\CODE\idea\MyReader\target\classes started by kuexun in D:\CODE\idea\MyReader)
+2020-03-28 20:19:01.621 INFO [main]com.monk.myreader.MyReaderApplication.logStartupProfileInfo:675 -No active profile set, falling back to default profiles: default
+2020-03-28 20:19:03.605 INFO [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f9180180] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-28 20:19:04.027 INFO [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8080 (http)
+2020-03-28 20:19:04.043 INFO [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-28 20:19:04.058 INFO [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-28 20:19:04.058 INFO [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-03-28 20:19:04.074 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-03-28 20:19:04.074 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-28 20:19:04.074 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-28 20:19:04.074 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-03-28 20:19:04.308 INFO [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-28 20:19:04.308 INFO [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:296 -Root WebApplicationContext: initialization completed in 2593 ms
+2020-03-28 20:19:05.636 INFO [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:171 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-28 20:19:05.964 INFO [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:120 -Context refreshed
+2020-03-28 20:19:05.995 INFO [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:123 -Found 1 custom documentation plugin(s)
+2020-03-28 20:19:06.011 INFO [main]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
+2020-03-28 20:19:06.276 INFO [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8080"]
+2020-03-28 20:19:06.308 INFO [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:204 -Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-28 20:19:06.323 INFO [main]com.monk.myreader.MyReaderApplication.logStarted:59 -Started MyReaderApplication in 5.639 seconds (JVM running for 7.537)
+2020-03-28 20:20:54.749 INFO [http-nio-8080-exec-2]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-28 20:20:54.749 INFO [http-nio-8080-exec-2]org.springframework.web.servlet.DispatcherServlet.initServletBean:524 -Initializing Servlet 'dispatcherServlet'
+2020-03-28 20:20:54.764 INFO [http-nio-8080-exec-2]org.springframework.web.servlet.DispatcherServlet.initServletBean:546 -Completed initialization in 15 ms
+2020-03-28 20:20:54.905 INFO [http-nio-8080-exec-2]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
+2020-03-28 20:21:25.054 WARN [http-nio-8080-exec-3]o.s.w.s.mvc.support.DefaultHandlerExceptionResolver.logException:197 -Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "list"]
+2020-03-28 20:43:54.481 INFO [main]com.monk.myreader.MyReaderApplication.logStarting:50 -Starting MyReaderApplication on DESKTOP-T1BP46Q with PID 7228 (D:\CODE\idea\MyReader\target\classes started by kuexun in D:\CODE\idea\MyReader)
+2020-03-28 20:43:54.481 INFO [main]com.monk.myreader.MyReaderApplication.logStartupProfileInfo:675 -No active profile set, falling back to default profiles: default
+2020-03-28 20:43:56.746 INFO [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8954a230] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-28 20:43:57.152 INFO [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8080 (http)
+2020-03-28 20:43:57.168 INFO [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-28 20:43:57.183 INFO [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-28 20:43:57.183 INFO [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-03-28 20:43:57.199 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-03-28 20:43:57.199 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-28 20:43:57.199 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-28 20:43:57.199 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-03-28 20:43:57.449 INFO [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-28 20:43:57.449 INFO [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:296 -Root WebApplicationContext: initialization completed in 2875 ms
+2020-03-28 20:43:57.964 WARN [main]o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh:557 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookController': Unsatisfied dependency expressed through field 'bookService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookServiceImpl': Unsatisfied dependency expressed through field 'bookMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bookMapper' defined in file [D:\CODE\idea\MyReader\target\classes\com\monk\myreader\mapper\BookMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\CODE\idea\MyReader\target\classes\mybatis\mapper\CategoryMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\CODE\idea\MyReader\target\classes\mybatis\mapper\CategoryMapper.xml]'. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for com.monk.myreader.mapper.CategoryMapper.BaseResultMap
+2020-03-28 20:43:57.980 INFO [main]org.apache.catalina.core.StandardService.log:173 -Stopping service [Tomcat]
+2020-03-28 20:43:58.058 INFO [main]o.s.b.a.logging.ConditionEvaluationReportLoggingListener.logMessage:142 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-03-28 20:46:07.761 INFO [main]com.monk.myreader.MyReaderApplication.logStarting:50 -Starting MyReaderApplication on DESKTOP-T1BP46Q with PID 11424 (D:\CODE\idea\MyReader\target\classes started by kuexun in D:\CODE\idea\MyReader)
+2020-03-28 20:46:07.777 INFO [main]com.monk.myreader.MyReaderApplication.logStartupProfileInfo:675 -No active profile set, falling back to default profiles: default
+2020-03-28 20:46:09.370 INFO [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d9145e5d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-28 20:46:09.761 INFO [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8080 (http)
+2020-03-28 20:46:09.776 INFO [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-28 20:46:09.776 INFO [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-28 20:46:09.792 INFO [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-03-28 20:46:09.792 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-03-28 20:46:09.792 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-28 20:46:09.792 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-28 20:46:09.792 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-03-28 20:46:10.026 INFO [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-28 20:46:10.042 INFO [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:296 -Root WebApplicationContext: initialization completed in 2187 ms
+2020-03-28 20:46:11.182 INFO [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:171 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-28 20:46:11.448 INFO [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:120 -Context refreshed
+2020-03-28 20:46:11.463 INFO [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:123 -Found 1 custom documentation plugin(s)
+2020-03-28 20:46:11.479 INFO [main]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
+2020-03-28 20:46:11.698 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: getUsingGET_1
+2020-03-28 20:46:11.713 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: insertUsingPOST_1
+2020-03-28 20:46:11.729 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: updateUsingPUT_1
+2020-03-28 20:46:11.760 INFO [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8080"]
+2020-03-28 20:46:11.791 INFO [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:204 -Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-28 20:46:11.791 INFO [main]com.monk.myreader.MyReaderApplication.logStarted:59 -Started MyReaderApplication in 4.889 seconds (JVM running for 7.067)
+2020-03-28 20:46:20.227 INFO [http-nio-8080-exec-1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-28 20:46:20.227 INFO [http-nio-8080-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:524 -Initializing Servlet 'dispatcherServlet'
+2020-03-28 20:46:20.227 INFO [http-nio-8080-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:546 -Completed initialization in 0 ms
+2020-03-28 20:46:33.563 INFO [http-nio-8080-exec-10]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
+2020-03-28 21:28:00.619 INFO [main]com.monk.myreader.MyReaderApplication.logStarting:50 -Starting MyReaderApplication on DESKTOP-T1BP46Q with PID 12736 (D:\CODE\idea\MyReader\target\classes started by kuexun in D:\CODE\idea\MyReader)
+2020-03-28 21:28:00.624 INFO [main]com.monk.myreader.MyReaderApplication.logStartupProfileInfo:675 -No active profile set, falling back to default profiles: default
+2020-03-28 21:28:02.136 INFO [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$54fab59a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-28 21:28:02.498 INFO [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8080 (http)
+2020-03-28 21:28:02.513 INFO [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-28 21:28:02.524 INFO [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-28 21:28:02.525 INFO [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-03-28 21:28:02.532 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-03-28 21:28:02.532 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-28 21:28:02.533 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-28 21:28:02.537 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-03-28 21:28:02.749 INFO [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-28 21:28:02.750 INFO [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:296 -Root WebApplicationContext: initialization completed in 2061 ms
+2020-03-28 21:28:03.126 WARN [main]o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh:557 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bannerController': Unsatisfied dependency expressed through field 'bannerService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bannerServiceImpl': Unsatisfied dependency expressed through field 'bannerMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'bannerMapper' defined in file [D:\CODE\idea\MyReader\target\classes\com\monk\myreader\mapper\BannerMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\CODE\idea\MyReader\target\classes\mybatis\mapper\BannerMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\CODE\idea\MyReader\target\classes\mybatis\mapper\BannerMapper.xml]'. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for com.monk.myreader.mapper.BannerMapper.BaseResultMap
+2020-03-28 21:28:03.130 INFO [main]org.apache.catalina.core.StandardService.log:173 -Stopping service [Tomcat]
+2020-03-28 21:28:03.155 INFO [main]o.s.b.a.logging.ConditionEvaluationReportLoggingListener.logMessage:142 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.

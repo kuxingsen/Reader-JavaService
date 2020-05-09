@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.monk.myreader.mapper.CacheMapper" >
+  <resultMap id="BaseResultMap" type="com.monk.myreader.bean.Cache" >
+    <result column="id" property="id" jdbcType="BIGINT" />
+    <result column="data_index" property="dataIndex" jdbcType="INTEGER" />
+    <result column="data_size" property="dataSize" jdbcType="INTEGER" />
+    <result column="book_id" property="bookId" jdbcType="BIGINT" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.monk.myreader.bean.Cache" extends="BaseResultMap" >
+    <result column="book_data" property="bookData" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, data_index, data_size, book_id
+  </sql>
+  <sql id="Blob_Column_List" >
+    book_data
+  </sql>
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.monk.myreader.bean.CacheExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from cache
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.monk.myreader.bean.CacheExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from cache
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.monk.myreader.bean.CacheExample" >
+    delete from cache
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.monk.myreader.bean.Cache" >
+    insert into cache (id, data_index, data_size, 
+      book_id, book_data)
+    values (#{id,jdbcType=BIGINT}, #{dataIndex,jdbcType=INTEGER}, #{dataSize,jdbcType=INTEGER}, 
+      #{bookId,jdbcType=BIGINT}, #{bookData,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.monk.myreader.bean.Cache" >
+    insert into cache
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="dataIndex != null" >
+        data_index,
+      </if>
+      <if test="dataSize != null" >
+        data_size,
+      </if>
+      <if test="bookId != null" >
+        book_id,
+      </if>
+      <if test="bookData != null" >
+        book_data,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="dataIndex != null" >
+        #{dataIndex,jdbcType=INTEGER},
+      </if>
+      <if test="dataSize != null" >
+        #{dataSize,jdbcType=INTEGER},
+      </if>
+      <if test="bookId != null" >
+        #{bookId,jdbcType=BIGINT},
+      </if>
+      <if test="bookData != null" >
+        #{bookData,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.monk.myreader.bean.CacheExample" resultType="java.lang.Integer" >
+    select count(*) from cache
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update cache
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.dataIndex != null" >
+        data_index = #{record.dataIndex,jdbcType=INTEGER},
+      </if>
+      <if test="record.dataSize != null" >
+        data_size = #{record.dataSize,jdbcType=INTEGER},
+      </if>
+      <if test="record.bookId != null" >
+        book_id = #{record.bookId,jdbcType=BIGINT},
+      </if>
+      <if test="record.bookData != null" >
+        book_data = #{record.bookData,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map" >
+    update cache
+    set id = #{record.id,jdbcType=BIGINT},
+      data_index = #{record.dataIndex,jdbcType=INTEGER},
+      data_size = #{record.dataSize,jdbcType=INTEGER},
+      book_id = #{record.bookId,jdbcType=BIGINT},
+      book_data = #{record.bookData,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update cache
+    set id = #{record.id,jdbcType=BIGINT},
+      data_index = #{record.dataIndex,jdbcType=INTEGER},
+      data_size = #{record.dataSize,jdbcType=INTEGER},
+      book_id = #{record.bookId,jdbcType=BIGINT}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>

@@ -1,0 +1,84 @@
+2020-04-28 22:03:41.688 INFO [main]com.monk.myreader.MyReaderApplication.logStarting:50 -Starting MyReaderApplication on DESKTOP-T1BP46Q with PID 1556 (D:\CODE\idea\MyReader\target\classes started by kuexun in D:\CODE\idea\MyReader)
+2020-04-28 22:03:41.710 INFO [main]com.monk.myreader.MyReaderApplication.logStartupProfileInfo:675 -No active profile set, falling back to default profiles: default
+2020-04-28 22:03:49.002 INFO [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8e1b3819] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-28 22:03:50.055 INFO [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8080 (http)
+2020-04-28 22:03:50.098 INFO [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8080"]
+2020-04-28 22:03:50.140 INFO [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-04-28 22:03:50.140 INFO [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-04-28 22:03:50.148 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-04-28 22:03:50.148 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-04-28 22:03:50.148 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-04-28 22:03:50.371 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-04-28 22:03:50.788 INFO [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-04-28 22:03:50.788 INFO [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:296 -Root WebApplicationContext: initialization completed in 8722 ms
+2020-04-28 22:03:53.184 INFO [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:171 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-28 22:03:53.640 INFO [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:120 -Context refreshed
+2020-04-28 22:03:53.688 INFO [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:123 -Found 1 custom documentation plugin(s)
+2020-04-28 22:03:53.703 INFO [main]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
+2020-04-28 22:03:53.950 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: getUsingGET_1
+2020-04-28 22:03:54.033 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: listSearchUsingPOST_1
+2020-04-28 22:03:54.052 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: getUsingGET_2
+2020-04-28 22:03:54.066 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: getUsingGET_3
+2020-04-28 22:03:54.070 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: getCatalogueByBookIdUsingGET_1
+2020-04-28 22:03:54.077 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: getUsingGET_4
+2020-04-28 22:03:54.094 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: insertUsingPOST_1
+2020-04-28 22:03:54.109 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: updateUsingPUT_1
+2020-04-28 22:03:54.118 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: deleteUsingDELETE_1
+2020-04-28 22:03:54.125 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: insertUsingPOST_2
+2020-04-28 22:03:54.194 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: getUsingGET_5
+2020-04-28 22:03:54.209 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: insertUsingPOST_3
+2020-04-28 22:03:54.216 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: listPageUsingPOST_1
+2020-04-28 22:03:54.221 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: updateUsingPUT_2
+2020-04-28 22:03:54.230 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: insertUsingPOST_4
+2020-04-28 22:03:54.237 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: listByBookIdUsingGET_1
+2020-04-28 22:03:54.244 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: listByUserIdUsingPOST_1
+2020-04-28 22:03:54.260 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: listSearchUsingPOST_2
+2020-04-28 22:03:54.325 INFO [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8080"]
+2020-04-28 22:03:54.389 INFO [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:204 -Tomcat started on port(s): 8080 (http) with context path ''
+2020-04-28 22:03:54.392 INFO [main]com.monk.myreader.MyReaderApplication.logStarted:59 -Started MyReaderApplication in 14.493 seconds (JVM running for 18.863)
+2020-04-28 22:05:11.985 INFO [http-nio-8080-exec-1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-28 22:05:11.985 INFO [http-nio-8080-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:524 -Initializing Servlet 'dispatcherServlet'
+2020-04-28 22:05:11.994 INFO [http-nio-8080-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:546 -Completed initialization in 9 ms
+2020-04-28 22:05:12.201 INFO [http-nio-8080-exec-1]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
+2020-04-28 22:20:04.247 INFO [main]com.monk.myreader.MyReaderApplication.logStarting:50 -Starting MyReaderApplication on DESKTOP-T1BP46Q with PID 10980 (D:\CODE\idea\MyReader\target\classes started by kuexun in D:\CODE\idea\MyReader)
+2020-04-28 22:20:04.265 INFO [main]com.monk.myreader.MyReaderApplication.logStartupProfileInfo:675 -No active profile set, falling back to default profiles: default
+2020-04-28 22:20:06.891 INFO [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$12a864cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-28 22:20:07.343 INFO [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8080 (http)
+2020-04-28 22:20:07.360 INFO [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8080"]
+2020-04-28 22:20:07.374 INFO [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-04-28 22:20:07.375 INFO [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-04-28 22:20:07.383 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-04-28 22:20:07.383 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-04-28 22:20:07.384 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-04-28 22:20:07.389 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-04-28 22:20:07.697 INFO [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-04-28 22:20:07.697 INFO [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:296 -Root WebApplicationContext: initialization completed in 3345 ms
+2020-04-28 22:20:09.405 INFO [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:171 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-28 22:20:09.622 INFO [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:120 -Context refreshed
+2020-04-28 22:20:09.642 INFO [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:123 -Found 1 custom documentation plugin(s)
+2020-04-28 22:20:09.663 INFO [main]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
+2020-04-28 22:20:09.829 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: getUsingGET_1
+2020-04-28 22:20:09.948 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: listSearchUsingPOST_1
+2020-04-28 22:20:09.966 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: getUsingGET_2
+2020-04-28 22:20:09.980 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: getUsingGET_3
+2020-04-28 22:20:09.985 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: getCatalogueByBookIdUsingGET_1
+2020-04-28 22:20:09.991 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: getUsingGET_4
+2020-04-28 22:20:10.009 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: insertUsingPOST_1
+2020-04-28 22:20:10.024 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: updateUsingPUT_1
+2020-04-28 22:20:10.030 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: deleteUsingDELETE_1
+2020-04-28 22:20:10.036 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: insertUsingPOST_2
+2020-04-28 22:20:10.104 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: getUsingGET_5
+2020-04-28 22:20:10.120 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: insertUsingPOST_3
+2020-04-28 22:20:10.129 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: listPageUsingPOST_1
+2020-04-28 22:20:10.137 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: updateUsingPUT_2
+2020-04-28 22:20:10.144 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: insertUsingPOST_4
+2020-04-28 22:20:10.153 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: listByBookIdUsingGET_1
+2020-04-28 22:20:10.159 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: listByUserIdUsingPOST_1
+2020-04-28 22:20:10.177 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: listSearchUsingPOST_2
+2020-04-28 22:20:10.231 INFO [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8080"]
+2020-04-28 22:20:10.266 INFO [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:204 -Tomcat started on port(s): 8080 (http) with context path ''
+2020-04-28 22:20:10.270 INFO [main]com.monk.myreader.MyReaderApplication.logStarted:59 -Started MyReaderApplication in 7.686 seconds (JVM running for 10.642)
+2020-04-28 22:30:14.034 INFO [http-nio-8080-exec-1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-28 22:30:14.034 INFO [http-nio-8080-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:524 -Initializing Servlet 'dispatcherServlet'
+2020-04-28 22:30:14.043 INFO [http-nio-8080-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:546 -Completed initialization in 8 ms
+2020-04-28 22:30:14.164 INFO [http-nio-8080-exec-1]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited

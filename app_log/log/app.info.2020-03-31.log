@@ -1,0 +1,36 @@
+2020-03-31 20:27:43.528 INFO [main]com.monk.myreader.MyReaderApplication.logStarting:50 -Starting MyReaderApplication on DESKTOP-T1BP46Q with PID 13952 (D:\CODE\idea\MyReader\target\classes started by kuexun in D:\CODE\idea\MyReader)
+2020-03-31 20:27:43.543 INFO [main]com.monk.myreader.MyReaderApplication.logStartupProfileInfo:675 -No active profile set, falling back to default profiles: default
+2020-03-31 20:27:47.880 INFO [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ca72680b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-31 20:27:48.800 INFO [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8080 (http)
+2020-03-31 20:27:48.847 INFO [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-31 20:27:48.900 INFO [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-03-31 20:27:48.900 INFO [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-03-31 20:27:48.915 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-03-31 20:27:48.915 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-31 20:27:48.915 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-31 20:27:49.163 INFO [main]org.apache.catalina.core.AprLifecycleListener.log:173 -OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-03-31 20:27:49.586 INFO [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-03-31 20:27:49.586 INFO [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:296 -Root WebApplicationContext: initialization completed in 5757 ms
+2020-03-31 20:27:51.670 INFO [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:171 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-31 20:27:52.040 INFO [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:120 -Context refreshed
+2020-03-31 20:27:52.093 INFO [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:123 -Found 1 custom documentation plugin(s)
+2020-03-31 20:27:52.093 INFO [main]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
+2020-03-31 20:27:52.340 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: getUsingGET_1
+2020-03-31 20:27:52.387 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: getUsingGET_2
+2020-03-31 20:27:52.394 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: getUsingGET_3
+2020-03-31 20:27:52.409 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: getCatalogueByBookIdUsingGET_1
+2020-03-31 20:27:52.409 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: getUsingGET_4
+2020-03-31 20:27:52.425 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: insertUsingPOST_1
+2020-03-31 20:27:52.425 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: updateUsingPUT_1
+2020-03-31 20:27:52.456 INFO [main]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: getUsingGET_5
+2020-03-31 20:27:52.487 INFO [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8080"]
+2020-03-31 20:27:52.541 INFO [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:204 -Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-31 20:27:52.541 INFO [main]com.monk.myreader.MyReaderApplication.logStarted:59 -Started MyReaderApplication in 10.781 seconds (JVM running for 15.225)
+2020-03-31 20:28:01.298 INFO [http-nio-8080-exec-1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-31 20:28:01.298 INFO [http-nio-8080-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:524 -Initializing Servlet 'dispatcherServlet'
+2020-03-31 20:28:01.298 INFO [http-nio-8080-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:546 -Completed initialization in 0 ms
+2020-03-31 20:28:01.784 INFO [http-nio-8080-exec-1]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
+2020-03-31 20:30:50.424 INFO [http-nio-8080-exec-9]com.monk.myreader.service.impl.FileServiceImpl.save:52 -上传的文件名：我的丹田是地球.txt  并改成 17f8acae59fe4dc2bc3c9ea6feec97c7.txt
+2020-03-31 20:34:46.263 INFO [http-nio-8080-exec-10]com.monk.myreader.service.impl.FileServiceImpl.save:52 -上传的文件名：我的丹田是地球.txt  并改成 32ae911bba04411f9f5f7f2c2fc781db.txt
+2020-03-31 20:40:56.245 INFO [http-nio-8080-exec-8]com.monk.myreader.service.impl.FileServiceImpl.save:52 -上传的文件名：重生之我为书狂[bookben.net].txt  并改成 caad396ce6ff4c9cbd04d88873688c2b.txt
+2020-03-31 20:46:53.285 INFO [http-nio-8080-exec-4]com.monk.myreader.service.impl.FileServiceImpl.save:52 -上传的文件名：三寸人间.txt  并改成 424fd24e6ecf46208dc805b053de2900.txt

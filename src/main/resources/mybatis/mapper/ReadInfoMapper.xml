@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.monk.myreader.mapper.ReadInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.monk.myreader.bean.ReadInfo" >
+    <result column="id" property="id" jdbcType="BIGINT" />
+    <result column="start" property="start" jdbcType="BIGINT" />
+    <result column="duration" property="duration" jdbcType="BIGINT" />
+    <result column="is_download" property="isDownload" jdbcType="BIT" />
+    <result column="book_id" property="bookId" jdbcType="BIGINT" />
+    <result column="user_id" property="userId" jdbcType="BIGINT" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, start, duration, is_download, book_id, user_id
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.monk.myreader.bean.ReadInfoExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from read_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.monk.myreader.bean.ReadInfoExample" >
+    delete from read_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.monk.myreader.bean.ReadInfo" >
+    insert into read_info (id, start, duration, 
+      is_download, book_id, user_id
+      )
+    values (#{id,jdbcType=BIGINT}, #{start,jdbcType=BIGINT}, #{duration,jdbcType=BIGINT}, 
+      #{isDownload,jdbcType=BIT}, #{bookId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.monk.myreader.bean.ReadInfo" >
+    insert into read_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="start != null" >
+        start,
+      </if>
+      <if test="duration != null" >
+        duration,
+      </if>
+      <if test="isDownload != null" >
+        is_download,
+      </if>
+      <if test="bookId != null" >
+        book_id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="start != null" >
+        #{start,jdbcType=BIGINT},
+      </if>
+      <if test="duration != null" >
+        #{duration,jdbcType=BIGINT},
+      </if>
+      <if test="isDownload != null" >
+        #{isDownload,jdbcType=BIT},
+      </if>
+      <if test="bookId != null" >
+        #{bookId,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.monk.myreader.bean.ReadInfoExample" resultType="java.lang.Integer" >
+    select count(*) from read_info
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update read_info
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.start != null" >
+        start = #{record.start,jdbcType=BIGINT},
+      </if>
+      <if test="record.duration != null" >
+        duration = #{record.duration,jdbcType=BIGINT},
+      </if>
+      <if test="record.isDownload != null" >
+        is_download = #{record.isDownload,jdbcType=BIT},
+      </if>
+      <if test="record.bookId != null" >
+        book_id = #{record.bookId,jdbcType=BIGINT},
+      </if>
+      <if test="record.userId != null" >
+        user_id = #{record.userId,jdbcType=BIGINT},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update read_info
+    set id = #{record.id,jdbcType=BIGINT},
+      start = #{record.start,jdbcType=BIGINT},
+      duration = #{record.duration,jdbcType=BIGINT},
+      is_download = #{record.isDownload,jdbcType=BIT},
+      book_id = #{record.bookId,jdbcType=BIGINT},
+      user_id = #{record.userId,jdbcType=BIGINT}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>

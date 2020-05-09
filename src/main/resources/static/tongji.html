@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"></meta>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"></meta>
+  <title>家具商场后台管理</title>
+  <link rel="stylesheet" href="layui/css/layui.css?t=1551352891272" media="all"></link>
+</head>
+<body class="layui-layout-body">
+	
+	<div class="layui-layout layui-layout-admin">
+		<div id = "common"></div>
+		<div class="layui-body">
+			<!-- 内容主体区域 -->			
+			<div id="main" style="width: 1400px;height:500px;position: absolute;right:-80px;bottom: 50px;"></div>
+			
+		</div>
+		</div>
+	</div>
+	
+	<script src="echarts.js"></script>
+		
+	<script src="layui/layui.js?t=1551352891272"></script>
+	<script>
+	
+
+		layui.use(['laydate', 'laypage', 'layer', 'table', 'upload','element'], function(){
+			var $ = layui.$;
+			$(function (){
+				//加载外部
+				$("#common").load("common.html");
+				}
+			)
+			$.ajax({
+				url:"/admin/food/list",
+				dataType:'json',
+				success:function(res){
+					if(res.code !== 0){
+						layer.msg(res.msg);
+						return;
+					}
+					let data = res.foodList;
+					console.info(data);
+					let nameArr = new Array();
+					let countArr = new Array();
+					for(let i = 0;i < data.length;i++){
+						nameArr[i] = data[i].name;
+						countArr[i] = data[i].count;
+					}
+					myfun.print(nameArr,countArr);
+				}
+			});
+			
+			var myfun = {
+			"print":function(name,count){
+				
+					//echarts
+					// 基于准备好的dom，初始化echarts实例
+					var myChart = echarts.init(document.getElementById('main'));
+
+					// 指定图表的配置项和数据
+					var option = {
+						title: {
+							text: '销量统计图'
+						},
+						tooltip: {},
+						legend: {
+							data:['销量']
+						},
+						xAxis: {
+							data: name
+						},
+						yAxis: {},
+						series: [{
+							name: '食物销量',
+							type: 'bar',
+							data: count
+						}]
+					};
+
+					// 使用刚指定的配置项和数据显示图表。
+					myChart.setOption(option);
+				},
+				"msg":function(res){
+					layer.msg(res.msg);
+					if(res.code === 0){
+						setTimeout(function (){
+							table.reload('demo');
+						},2000)
+					}
+				}
+			}
+		});
+	</script>
+</body>
+</html>        
+        

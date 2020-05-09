@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"></meta>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"></meta>
+  <title>家具商场后台管理</title>
+  <link rel="stylesheet" href="layui/css/layui.css?t=1551352891272" media="all"></link>
+</head>
+<body class="layui-layout-body">
+	
+	<div class="layui-layout layui-layout-admin">
+		<div id = "common"></div>
+		<div class="layui-body">
+			<!-- 内容主体区域 -->
+			<div style="padding: 15px;">
+				<table id="demo" lay-filter="test"></table>
+			</div>
+			
+			<div id="showItem" style="display:none; height:300px;width:500px;">
+				<table id="itemList" lay-filter="itemList"></table>
+			</div>
+		</div>
+		<div id="main" style="width: 600px;height:400px;position: absolute;right: -30px;bottom: 200px;"></div>
+	</div>
+	
+	<!-- 查看商品列表详细 -->
+	<script type="text/html" id="item_bar">
+		<a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="orderItem">
+			<i class="layui-icon">&#xe60a;</i>
+		</a>
+	</script>
+	
+	<script src="echarts.js"></script>
+	<script src="layui/layui.js?t=1551352891272"></script>
+	<script>
+	//echarts
+	// 基于准备好的dom，初始化echarts实例
+	var myChart = echarts.init(document.getElementById('main'));
+
+	// 指定图表的配置项和数据
+	var option = {
+		title: {
+			text: 'ECharts 入门示例'
+		},
+		tooltip: {},
+		legend: {
+			data:['销量']
+		},
+		xAxis: {
+			data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+		},
+		yAxis: {},
+		series: [{
+			name: '销量',
+			type: 'bar',
+			data: [5, 20, 36, 10, 10, 20]
+		}]
+	};
+
+	// 使用刚指定的配置项和数据显示图表。
+	myChart.setOption(option);
+
+
+
+
+
+	//layui
+		layui.use(['laydate', 'laypage', 'layer', 'table', 'upload','element'], function(){
+			var laypage = layui.laypage //分页
+			,layer = layui.layer //弹层
+			,table = layui.table //表格
+			,upload = layui.upload //上传
+			,form = layui.form //
+			,element = layui.element //
+			,$ = layui.$;
+			$(function (){
+				//加载外部
+				$("#common").load("common.html");
+				}
+			)
+			
+			//执行一个 table 实例
+			table.render({
+				elem: '#demo'
+				,height: '539'
+				,url: 'https://www.easy-mock.com/mock/5cdc1502234727303b278f57/orderfood/admin/order/list' //数据接口
+				,title: '家具表'
+				,page: true //开启分页
+				,contentType: 'application/json'
+				,parseData: function(res){ //res 即为原始返回的数据
+								return {
+									"code": res.code, //解析接口状态
+									"msg": res.msg, //解析提示文本
+									"count": res.total, //解析数据长度
+									"data": res.orderList //解析数据列表
+								};
+							}
+				,cols: [[ //表头
+					,{field: 'id', title: '订单编号', width:170, unresize:true}
+					,{field: 'before_price', title: '原价格',width: 100,unresize:true}
+					,{field: 'pon_count', title: '使用的优惠券',width: 100,unresize:true}
+					,{field: 'after_price', title: '优惠后价格',width: 100,unresize:true}
+					,{field: 'user_id',templet: '<div>{{d.user.id}}</div>', title: '用户id',unresize:true,hide:true}
+					,{field: 'user_name',templet: '<div>{{d.user.name}}</div>', width:120, title: '用户名称',unresize:true}
+					,{field: 'items', title: '订单商品', width: 90,unresize:true, toolbar: '#item_bar'}
+				]]
+			});
+			//监听行工具事件
+			table.on('tool(test)', function(obj){ //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+				var data = obj.data //获得当前行数据
+				,layEvent = obj.event; //获得 lay-event 对应的值
+				if(layEvent === 'orderItem'){
+					// layer.msg('查看图片');
+					myfun.showItem(data.id);
+				}
+			});
+			
+			var myfun = {
+				"showItem":function(id){
+					myfun.getItems(id);
+					
+					setTimeout(function (){
+						// console.info(id);
+						layer.open({
+							type:1, 
+							title:"查看商品", 
+							area:["444px","400px"], 
+							btn: ['确定'],
+							yes: function(index, layero){
+								layer.close(index);
+							},
+							shadeClose: true, //点击遮罩关闭
+							content:$("#showItem").html()
+						});
+					},600)
+					
+				},
+				"getItems":function(id){
+					//执行一个 table 实例
+					table.render({
+						
+						elem: '#itemList'
+						,url: 'https://www.easy-mock.com/mock/5cdc1502234727303b278f57/orderfood/admin/order/a/'+id //数据接口
+						,width:'1000px'
+						,title: '商品表'
+						,contentType: 'application/json'
+						,parseData: function(res){ //res 即为原始返回的数据
+										return {
+										"code": res.code, //解析接口状态
+										"msg": res.msg, //解析提示文本
+										"count": res.total, //解析数据长度
+										"data": res.orderItemList //解析数据列表
+										};
+									}
+						,cols: [[ //表头
+							{field: 'id', title: 'ID', width:46, unresize:true}
+							,{field: 'name', title: '菜名',width: 150,unresize:true}
+							,{field: 'price', title: '单价', width: 90,unresize:true}
+							,{field: 'count', title: '数量', width: 46,unresize:true}
+							,{field: 'status', title: '状态', width: 90,unresize:true}
+						]]
+					});
+				},
+				"msg":function(res){
+					layer.msg(res.msg);
+					if(res.code === 0){
+						setTimeout(function (){
+							table.reload('demo');
+						},2000)
+					}
+				}
+			}
+		});
+	</script>
+</body>
+</html>        
+        

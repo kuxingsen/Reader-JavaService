@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"></meta>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"></meta>
+  <title>家具商场后台管理</title>
+  <link rel="stylesheet" href="layui/css/layui.css?t=1551352891272" media="all"></link>
+</head>
+<body class="layui-layout-body">
+	
+	<div class="layui-layout layui-layout-admin">
+		<div id = "common"></div>
+		<div class="layui-body">
+			<!-- 内容主体区域 -->
+			<div style="padding: 15px;">
+				<table id="demo" lay-filter="test"></table>
+			</div>
+			
+			<div id="showPon" style="display:none; height:300px;width:500px;">
+				<table id="ponList" lay-filter="ponList"></table>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 查看商品列表详细 -->
+	<script type="text/html" id="pon_bar">
+		<a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="userPon">
+			<i class="layui-icon">&#xe60a;</i>
+		</a>
+	</script>
+	
+		
+	<script src="layui/layui.js?t=1551352891272"></script>
+	<script>
+	
+		layui.use(['laydate', 'laypage', 'layer', 'table', 'upload','element'], function(){
+			var laypage = layui.laypage //分页
+			,layer = layui.layer //弹层
+			,table = layui.table //表格
+			,upload = layui.upload //上传
+			,form = layui.form //
+			,element = layui.element //
+			,$ = layui.$;
+			$(function (){
+				//加载外部
+				$("#common").load("common.html");
+				}
+			)
+			
+			//执行一个 table 实例
+			table.render({
+				elem: '#demo'
+				,height: '539'
+				,url: 'https://www.easy-mock.com/mock/5cdc1502234727303b278f57/orderfood/admin/user/list' //数据接口
+				,title: '用户表'
+				,page: true //开启分页
+				,contentType: 'application/json'
+				,parseData: function(res){ //res 即为原始返回的数据
+								return {
+								"code": res.code, //解析接口状态
+								"msg": res.msg, //解析提示文本
+								"count": res.total, //解析数据长度
+								"data": res.userList //解析数据列表
+								};
+							}
+				,cols: [[ //表头
+					,{field: 'id', title: 'ID', width:40, unresize:true}
+					,{field: 'wechat_id', title: '微信账号',width: 150,unresize:true}
+					,{field: 'wechat_name', title: '微信名', width: 190,unresize:true}
+					,{title: '拥有的优惠券', width: 180,unresize:true, toolbar: '#pon_bar'}
+				]]
+			});
+			
+			//监听行工具事件
+			table.on('tool(test)', function(obj){ //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+				var data = obj.data //获得当前行数据
+				,layEvent = obj.event; //获得 lay-event 对应的值
+				if(layEvent === 'userPon'){
+					
+					myfun.showPon(data.id);
+				}
+			});
+
+			var myfun = {
+				"showPon":function(id){
+					myfun.getPon(id);
+					
+					setTimeout(function (){
+						// console.info(id);
+						layer.open({
+							type:1, 
+							title:"查看优惠券", 
+							area:["444px","400px"], 
+							btn: ['确定'],
+							yes: function(index, layero){
+								layer.close(index);
+							},
+							shadeClose: true, //点击遮罩关闭
+							content:$("#showPon").html()
+						});
+					},600)
+					
+				},
+				"getPon":function(id){
+					//执行一个 table 实例
+					table.render({
+						
+						elem: '#ponList'
+						,url: 'https://www.easy-mock.com/mock/5cdc1502234727303b278f57/orderfood/admin/user/pon/list' //数据接口
+						,width:'1000px'
+						,title: '商品表'
+						,contentType: 'application/json'
+						,parseData: function(res){ //res 即为原始返回的数据
+										return {
+										"code": res.code, //解析接口状态
+										"msg": res.msg, //解析提示文本
+										"count": res.total, //解析数据长度
+										"data": res.ponList //解析数据列表
+										};
+									}
+						,cols: [[ //表头
+							{field: 'id', title: 'ID', width:140, unresize:true}
+							,{field: 'type_count', title: '优惠力度',width: 100,unresize:true}
+							,{field: 'locktime', title: "过期时间", width: 190,unresize:true}
+						]]
+					});
+				},
+				"msg":function(res){
+					layer.msg(res.msg);
+					if(res.code === 0){
+						setTimeout(function (){
+							table.reload('demo');
+						},2000)
+					}
+				}
+			}
+		});
+	</script>
+</body>
+</html>        
+        
